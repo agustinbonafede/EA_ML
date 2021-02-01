@@ -131,10 +131,10 @@ def pca(datos, columnas):
     
     n_comp = len(columnas)
     
-    pca = PCA(n_components = n_comp )
-    pca.fit(X)
+    pca_model = PCA(n_components = n_comp )
+    pca_model.fit(X)
     
-    X_pca = pca.transform(X)
+    X_pca = pca_model.transform(X)
     
     col = []
     for i in range(1,n_comp+1):
@@ -145,4 +145,4 @@ def pca(datos, columnas):
     pc_df['Mecanizado']=X_df['Mecanizado']
     pc_df['CH'] = X_df['CH']
     
-    return pc_df
+    return pc_df, pca_model
