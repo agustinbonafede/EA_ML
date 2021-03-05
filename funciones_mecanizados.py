@@ -138,7 +138,7 @@ def pca(datos, columnas):
     
     col = []
     for i in range(1,n_comp+1):
-        col.append('PC'+str(i))
+        col.append('CP'+str(i))
         
     pc_df= pd.DataFrame(data=X_pca, columns=col)
     pc_df['Herramienta']=X_df['Herramienta']
